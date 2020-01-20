@@ -1,0 +1,29 @@
+@import "../variables";
+
+.btn
+{
+	&.btn-primary
+	{
+
+	}
+	
+	&.btn-secondary
+	{
+	
+	}
+	
+	&.btn-primary-light
+	{
+		background                 : $white;
+		color                      : $primary;
+		font-weight                : bolder;
+		font-size                  : 22px;
+		padding                    : 8px 10px;
+		border-radius              : 3px;
+		
+		&:hover, &:focus
+		{
+			box-shadow : 0 0 5px 5px rgba(0, 0, 0, 0.05);
+		}
+	}
+}
