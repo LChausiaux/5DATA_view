@@ -25,9 +25,9 @@ export default class Navbar extends Component {
         return (
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="logo">
-                    <a href="http://google.com" className="navbar-brand">
+                    <div className="navbar-brand">
                         <img src={logo} alt="logo"/>
-                    </a>
+                    </div>
                     <Link to="/" className="navbar-brand">SUPData</Link>
                 </div>
                 <div className="navbar-items">

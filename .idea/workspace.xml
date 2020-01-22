@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5f0333a-d7ab-47b8-bbd7-62c51adcd2b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/graph.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/campus.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/campus.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pros.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pros.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/students.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/students.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/swoosh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/_main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/components/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/components/_cards.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,12 +94,24 @@
       <workItem from="1579533621303" duration="2166000" />
       <workItem from="1579537117596" duration="8238000" />
       <workItem from="1579603197527" duration="9021000" />
-      <workItem from="1579682898219" duration="8494000" />
+      <workItem from="1579682898219" duration="12866000" />
     </task>
+    <task id="LOCAL-00001" summary="Graph component added&#10;Chartjs integrated">
+      <created>1579700449063</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579700449063</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Graph component added&#10;Chartjs integrated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Graph component added&#10;Chartjs integrated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#ESLint" timestamp="1579683023619">
@@ -121,6 +122,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1579515417764" />
+    <state x="391" y="22" key="CommitChangelistDialog2" timestamp="1579710379023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="391" y="22" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579710379023" />
+    <state x="147" y="81" key="DiffContextDialog" timestamp="1579710371733">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="81" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1579710371733" />
     <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1579625427614">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
