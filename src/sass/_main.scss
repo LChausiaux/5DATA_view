@@ -4,35 +4,74 @@ body
 {
 	background      : url("../img/background.png") no-repeat top;
 	background-size : 100% auto;
-	
+
+	a
+	{
+		color : black;
+
+		&:hover
+		{
+			color           : black;
+			text-decoration : none;
+		}
+	}
+
 	nav.navbar.navbar-expand-lg
 	{
 		padding         : 20px 50px;
 		background      : none;
 		display         : flex;
 		justify-content : space-between;
-		
+
+		.logo
+		{
+			display         : flex;
+			justify-content : center;
+			align-items     : center;
+
+			img
+			{
+				width : 40px;
+			}
+		}
+
+		.navbar-brand
+		{
+			color       : $white;
+			font-size   : 25px;
+			font-family : $main-font;
+			font-weight : 600;
+			padding     : 0;
+		}
+
 		.navbar-items
 		{
 			display         : flex;
 			justify-content : flex-end;
-			
+
 			.navbar-item .nav-link
 			{
-				margin      : 0 5px;
-				color       : $white;
-				font-size   : 20px;
-				font-family : $main-font;
-				font-weight : 400;
+				margin        : 0 5px;
+				color         : $white;
+				font-size     : 20px;
+				font-family   : $main-font;
+				font-weight   : 400;
+				border-bottom : 3px solid transparent;
+				transition    : border-bottom-color .3s ease;
+
+				&:hover, &.active
+				{
+					border-bottom : 3px solid $white;
+				}
 			}
 		}
 	}
-	
+
 	.container
 	{
 		max-width : 100%;
 		padding   : 75px 100px;
-		
+
 		.call-to-action
 		{
 			display         : flex;
@@ -40,152 +79,244 @@ body
 			justify-content : center;
 			align-content   : center;
 			align-items     : center;
-			
+
 			h1
 			{
 				text-align : center;
 				color      : $white;
 			}
-			
+
 			.btn
 			{
 				margin-top : 50px;
 			}
-			
+
 			svg
 			{
-				width       : 60%;
-				margin-top: 50px;
+				width      : 60%;
+				margin-top : 50px;
 			}
-			
+
 			.cls-1, .cls-14, .cls-18, .cls-19, .cls-2
-			{fill : #FFF;}
-			
+			{
+				fill : #FFF;
+			}
+
 			.cls-1, .cls-19
-			{stroke : #CCC;stroke-width : 0.5px;}
-			
+			{
+				stroke       : #CCC;
+				stroke-width : 0.5px;
+			}
+
 			.cls-1, .cls-17, .cls-19
-			{stroke-miterlimit : 10;}
-			
+			{
+				stroke-miterlimit : 10;
+			}
+
 			.cls-3
-			{fill : #DDE2E6;}
-			
+			{
+				fill : #DDE2E6;
+			}
+
 			.cls-4
-			{fill : #F1F3F5;}
-			
+			{
+				fill : #F1F3F5;
+			}
+
 			.cls-10, .cls-11, .cls-12, .cls-16, .cls-26, .cls-27, .cls-28, .cls-29, .cls-31, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-5, .cls-6, .cls-9
-			{fill : #333A41;}
-			
+			{
+				fill : #333A41;
+			}
+
 			.cls-5
-			{opacity : 0.4;}
-			
+			{
+				opacity : 0.4;
+			}
+
 			.cls-11, .cls-12, .cls-13, .cls-26, .cls-27, .cls-29, .cls-30, .cls-31, .cls-33, .cls-35, .cls-36, .cls-37, .cls-38, .cls-5, .cls-6, .cls-8, .cls-9
-			{isolation : isolate;}
-			
+			{
+				isolation : isolate;
+			}
+
 			.cls-6
-			{font-size : 12px;font-family : Arial-BoldMT, Arial, serif;}
-			
+			{
+				font-size   : 12px;
+				font-family : Arial-BoldMT, Arial, serif;
+			}
+
 			.cls-10, .cls-11, .cls-12, .cls-13, .cls-26, .cls-27, .cls-28, .cls-29, .cls-31, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-6, .cls-9
-			{font-weight : 700;}
-			
+			{
+				font-weight : 700;
+			}
+
 			.cls-17, .cls-7
-			{fill : #F65F5A;}
-			
+			{
+				fill : #F65F5A;
+			}
+
 			.cls-10, .cls-11, .cls-12, .cls-13, .cls-26, .cls-9
-			{font-size : 16.02px;}
-			
+			{
+				font-size : 16.02px;
+			}
+
 			.cls-10, .cls-11, .cls-12, .cls-13, .cls-26, .cls-27, .cls-28, .cls-29, .cls-31, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-9
-			{font-family : Lato-Bold, Lato, serif;}
-			
+			{
+				font-family : Lato-Bold, Lato, serif;
+			}
+
 			.cls-9
-			{letter-spacing : -0.02em;}
-			
+			{
+				letter-spacing : -0.02em;
+			}
+
 			.cls-12
-			{letter-spacing : -0.01em;}
-			
+			{
+				letter-spacing : -0.01em;
+			}
+
 			.cls-13
-			{fill : #878787;}
-			
+			{
+				fill : #878787;
+			}
+
 			.cls-14
-			{stroke : #E2E3EA;stroke-width : 0.79px;}
-			
+			{
+				stroke       : #E2E3EA;
+				stroke-width : 0.79px;
+			}
+
 			.cls-14, .cls-15, .cls-19, .cls-21, .cls-22, .cls-24
-			{fill-rule : evenodd;}
-			
+			{
+				fill-rule : evenodd;
+			}
+
 			.cls-15
-			{fill : #212529;}
-			
+			{
+				fill : #212529;
+			}
+
 			.cls-17
-			{stroke : #FFF;stroke-width : 2px;}
-			
+			{
+				stroke       : #FFF;
+				stroke-width : 2px;
+			}
+
 			.cls-18
-			{stroke : #F65F5A;stroke-width : 4.8px;}
-			
+			{
+				stroke       : #F65F5A;
+				stroke-width : 4.8px;
+			}
+
 			.cls-20, .cls-23, .cls-25
-			{fill : none;stroke-width : 0.91px;}
-			
+			{
+				fill         : none;
+				stroke-width : 0.91px;
+			}
+
 			.cls-20
-			{stroke : #3CD891;}
-			
+			{
+				stroke : #3CD891;
+			}
+
 			.cls-21
-			{fill : url(#Dégradé_sans_nom_2);}
-			
+			{
+				fill : url(#Dégradé_sans_nom_2);
+			}
+
 			.cls-22
-			{fill : url(#Dégradé_sans_nom_3);}
-			
+			{
+				fill : url(#Dégradé_sans_nom_3);
+			}
+
 			.cls-23
-			{stroke : #F97A1F;}
-			
+			{
+				stroke : #F97A1F;
+			}
+
 			.cls-24
-			{fill : url(#Dégradé_sans_nom_4);}
-			
+			{
+				fill : url(#Dégradé_sans_nom_4);
+			}
+
 			.cls-25
-			{stroke : #6C5BE7;}
-			
+			{
+				stroke : #6C5BE7;
+			}
+
 			.cls-26
-			{letter-spacing : -0.04em;}
-			
+			{
+				letter-spacing : -0.04em;
+			}
+
 			.cls-27, .cls-28, .cls-29, .cls-31, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38
-			{font-size : 15.16px;}
-			
+			{
+				font-size : 15.16px;
+			}
+
 			.cls-27
-			{letter-spacing : -0.05em;}
-			
+			{
+				letter-spacing : -0.05em;
+			}
+
 			.cls-30, .cls-31
-			{opacity : 0.6;}
-			
+			{
+				opacity : 0.6;
+			}
+
 			.cls-31
-			{letter-spacing : -0.13em;}
-			
+			{
+				letter-spacing : -0.13em;
+			}
+
 			.cls-32, .cls-34
-			{letter-spacing : -0.1em;}
-			
+			{
+				letter-spacing : -0.1em;
+			}
+
 			.cls-33
-			{letter-spacing : -0.03em;}
-			
+			{
+				letter-spacing : -0.03em;
+			}
+
 			.cls-35
-			{letter-spacing : -0.02em;}
-			
+			{
+				letter-spacing : -0.02em;
+			}
+
 			.cls-36
-			{letter-spacing : -0.04em;}
-			
+			{
+				letter-spacing : -0.04em;
+			}
+
 			.cls-37
-			{letter-spacing : -0.15em;}
-			
+			{
+				letter-spacing : -0.15em;
+			}
+
 			.cls-38
-			{letter-spacing : -0.02em;}
-			
+			{
+				letter-spacing : -0.02em;
+			}
+
 			.cls-39
-			{letter-spacing : -0.1em;}
-			
+			{
+				letter-spacing : -0.1em;
+			}
+
 			.cls-40
-			{letter-spacing : -0.01em;}
-			
+			{
+				letter-spacing : -0.01em;
+			}
+
 			.cls-41
-			{letter-spacing : -0.02em;}
-			
+			{
+				letter-spacing : -0.02em;
+			}
+
 			.cls-42
-			{letter-spacing : -0.02em;}
+			{
+				letter-spacing : -0.02em;
+			}
 		}
 	}
 }
