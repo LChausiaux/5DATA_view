@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c5f0333a-d7ab-47b8-bbd7-62c51adcd2b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/_main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/students.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/students.component.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +96,9 @@
       <workItem from="1579537117596" duration="8238000" />
       <workItem from="1579603197527" duration="9021000" />
       <workItem from="1579682898219" duration="12866000" />
+      <workItem from="1579710351147" duration="228000" />
+      <workItem from="1579948967260" duration="750000" />
+      <workItem from="1579965936736" duration="1119000" />
     </task>
     <task id="LOCAL-00001" summary="Graph component added&#10;Chartjs integrated">
       <created>1579700449063</created>
@@ -103,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579700449063</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixes">
+      <created>1579710520853</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579710520853</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +122,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Graph component added&#10;Chartjs integrated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Graph component added&#10;Chartjs integrated" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#ESLint" timestamp="1579683023619">
@@ -122,10 +134,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1579515417764" />
-    <state x="391" y="22" key="CommitChangelistDialog2" timestamp="1579710379023">
+    <state x="391" y="22" key="CommitChangelistDialog2" timestamp="1579710518269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="22" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579710379023" />
+    <state x="391" y="22" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579710518269" />
     <state x="147" y="81" key="DiffContextDialog" timestamp="1579710371733">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -150,6 +162,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1579520778142" />
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2" timestamp="1579710566429">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1579710566429" />
+    <state x="418" y="43" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579966259431">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="418" y="43" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1579966259431" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1579699745032">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

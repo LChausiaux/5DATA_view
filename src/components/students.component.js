@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Graph from "./graph.component";
 import {Bar, Line, Pie} from 'react-chartjs-2';
+import axios from 'axios';
 
 export default class Students extends Component
 {
@@ -14,6 +15,9 @@ export default class Students extends Component
 
     componentWillMount() {
         //ajax requests
+        //Moyenne ECTS/an/campus
+        axios.get('http://localhost:4000/ects/campus')
+            .then(res => console.log(res.data));
         this.setState({
             testGraph: <Bar data={
                 {
