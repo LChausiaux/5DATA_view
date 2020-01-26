@@ -1,14 +1,8 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-import swoosh from '../img/swoosh.jpg';
 
 export default class Landing extends Component
 {
-    constructor(props)
-    {
-        super(props);
-    }
-
     render()
     {
         return (
