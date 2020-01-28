@@ -1,8 +1,10 @@
 import React, {Component} from "react";
 
-export default class Graph extends Component {
+export default class Graph extends Component
+{
 
-    constructor(props) {
+    constructor(props)
+    {
         super(props);
 
         this.activateLeft = this.activateLeft.bind(this);
@@ -11,7 +13,9 @@ export default class Graph extends Component {
         this.state = {
             isRightActive: false,
             isLeftActive: true,
-            activeGraph: this.props.graphLeft
+            graphLeft: '',
+            graphRight: '',
+            activeGraph: ''
         };
     }
 
@@ -20,7 +24,7 @@ export default class Graph extends Component {
         this.setState({
             isRightActive: false,
             isLeftActive: true,
-            activeGraph: this.props.graphLeft
+            activeGraph: this.state.graphLeft
         });
     }
 
@@ -29,11 +33,23 @@ export default class Graph extends Component {
         this.setState({
             isRightActive: true,
             isLeftActive: false,
-            activeGraph: this.props.graphRight
+            activeGraph: this.state.graphRight
         });
     }
 
-    render() {
+    componentWillReceiveProps(nextProps, nextContent)
+    {
+        if (this.props !== nextProps) {
+            this.setState({
+                graphLeft: nextProps.graphLeft,
+                graphRight: nextProps.graphRight,
+                activeGraph: this.state.isRightActive ? nextProps.graphRight : nextProps.graphLeft
+            });
+        }
+    }
+
+    render()
+    {
 
         return (
             <div className="col-5 card">
@@ -43,12 +59,12 @@ export default class Graph extends Component {
                     </div>
                     <div className="tabs">
                         <div className={`tab ${this.state.isLeftActive ? 'active' : ''}`}
-                            onClick={this.activateLeft}>
-                            <a href="#">{this.props.tabLeft}</a>
+                             onClick={this.activateLeft}>
+                            <p>{this.props.tabLeft}</p>
                         </div>
                         <div className={`tab ${this.state.isRightActive ? 'active' : ''}`}
                              onClick={this.activateRight}>
-                        <a href="#">{this.props.tabRight}</a>
+                            <p>{this.props.tabRight}</p>
                         </div>
                     </div>
                 </div>

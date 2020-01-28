@@ -4,8 +4,12 @@
     <list default="true" id="c5f0333a-d7ab-47b8-bbd7-62c51adcd2b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/campus.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/campus.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/graph.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pros.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pros.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/students.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/students.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sass/components/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/components/_cards.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +46,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -99,6 +104,10 @@
       <workItem from="1579710351147" duration="228000" />
       <workItem from="1579948967260" duration="750000" />
       <workItem from="1579965936736" duration="1119000" />
+      <workItem from="1580029588619" duration="123000" />
+      <workItem from="1580029765519" duration="7454000" />
+      <workItem from="1580112968875" duration="10985000" />
+      <workItem from="1580199612035" duration="12685000" />
     </task>
     <task id="LOCAL-00001" summary="Graph component added&#10;Chartjs integrated">
       <created>1579700449063</created>
@@ -158,6 +167,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579625427614" />
+    <state x="468" y="164" key="SettingsEditor" timestamp="1580117695836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="468" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580117695836" />
     <state width="498" height="445" key="SwitcherDM" timestamp="1579520778142">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

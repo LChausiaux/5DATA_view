@@ -30,13 +30,14 @@
 
 				&.active, &:hover
 				{
-					a
+					p
 					{
+						cursor: pointer;
 						color               : $primary;
 					}
 				}
 
-				a
+				p
 				{
 					font-size     : 16px;
 					font-weight   : 600;
