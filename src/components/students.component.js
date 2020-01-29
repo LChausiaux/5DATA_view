@@ -10,11 +10,11 @@ export default class Students extends Component
     {
         super();
         this.state = {
-            ectsByCampus: '',
-            ectsByParents: '',
-            ectsByPreviousDegree: '',
-            raisonsArretReasons: '',
-            raisonsArretCount: '',
+            ectsByCampus: '<img src="../img/logo.png" />',
+            ectsByParents: '<img src="../img/logo.png" />',
+            ectsByPreviousDegree: '<img src="../img/logo.png" />',
+            raisonsArretReasons: '<img src="../img/logo.png" />',
+            raisonsArretCount: '<img src="../img/logo.png" />',
         }
     }
 
@@ -34,7 +34,7 @@ export default class Students extends Component
            Arrêt etudes par rapport au campus -> bar
            Arrêt etudes par rapport à la Promo -> bar
          */
-        axios.get('http://localhost:4000/ects/campus')
+        axios.get('http://localhost:4000/ects/campus'   )
             .then(res =>
             {
                 let means = {
@@ -350,6 +350,7 @@ export default class Students extends Component
                         options={{
                             legend: false
                         }}
+                        redraw
                     />
                 })
             });
@@ -431,6 +432,7 @@ export default class Students extends Component
                         options={{
                             legend: false
                         }}
+                        redraw
                     />
                 })
             });
@@ -515,8 +517,6 @@ export default class Students extends Component
                     });
                 });
             });
-        console.log('GDFFDGDFSGDFGS');
-
     }
 
     render()

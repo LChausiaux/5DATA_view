@@ -9,10 +9,10 @@ export default class Campus extends Component
     {
         super();
         this.state = {
-            discovery: '',
-            firstChoice: '',
-            labByCampus: '',
-            eatByCampus: '',
+            discovery: '<img src="../img/logo.png" />',
+            firstChoice: '<img src="../img/logo.png" />',
+            labByCampus: '<img src="../img/logo.png" />',
+            eatByCampus: '<img src="../img/logo.png" />',
         }
     }
 

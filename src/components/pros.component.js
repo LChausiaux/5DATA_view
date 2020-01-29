@@ -10,10 +10,10 @@ export default class Pros extends Component
     {
         super();
         this.state = {
-            internshipByCampus: '',
-            contratProByCampus: '',
-            internshipByPromo: '',
-            contratProByPromo: '',
+            internshipByCampus: '<img src="../img/logo.png" />',
+            contratProByCampus: '<img src="../img/logo.png" />',
+            internshipByPromo: '<img src="../img/logo.png" />',
+            contratProByPromo: '<img src="../img/logo.png" />',
         }
     }
 
@@ -114,6 +114,7 @@ export default class Pros extends Component
                         options={{
                             legend: false
                         }}
+                        redraw
                     />
                 })
             });
@@ -173,7 +174,7 @@ export default class Pros extends Component
                 this.setState({
                     internshipByPromo: <Bar
                         data={{
-                            labels: ['ASC.1', 'ASC.2', 'BSC.c', 'MSC.1', 'MSC.2'],
+                            labels: ['ASC.1', 'ASC.2', 'BSC', 'MSC.1', 'MSC.2'],
                             datasets: [
                                 {
                                     data: [
@@ -197,6 +198,7 @@ export default class Pros extends Component
                         options={{
                             legend: false
                         }}
+                        redraw
                     />
                 })
             });
@@ -289,6 +291,7 @@ export default class Pros extends Component
                         options={{
                             legend: false
                         }}
+                        redraw
                     />
                 })
             });
@@ -372,6 +375,7 @@ export default class Pros extends Component
                         options={{
                             legend: false
                         }}
+                        redraw
                     />
                 })
             });
