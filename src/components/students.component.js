@@ -3,11 +3,9 @@ import Graph from "./graph.component";
 import {Bar, Pie} from 'react-chartjs-2';
 import axios from 'axios';
 
-export default class Students extends Component
-{
+export default class Students extends Component {
 
-    constructor()
-    {
+    constructor() {
         super();
         this.state = {
             ectsByCampus: '<img src="../img/logo.png" />',
@@ -18,8 +16,7 @@ export default class Students extends Component
         }
     }
 
-    componentWillMount()
-    {
+    componentWillMount() {
         //ajax requests
         /*
            Moyenne ECTS/an/campus -> bar
@@ -34,9 +31,8 @@ export default class Students extends Component
            Arrêt etudes par rapport au campus -> bar
            Arrêt etudes par rapport à la Promo -> bar
          */
-        axios.get('http://localhost:4000/ects/campus'   )
-            .then(res =>
-            {
+        axios.get('http://localhost:4000/ects/campus')
+            .then(res => {
                 let means = {
                     troyes: {
                         count: 0,
@@ -64,8 +60,7 @@ export default class Students extends Component
                     }
                 };
 
-                res.data.forEach(item =>
-                {
+                res.data.forEach(item => {
                     let years = item.nombreCrédit > 60 ? Math.floor(item.nombreCrédit / 60) : 1;
 
                     switch (item.campus) {
@@ -128,8 +123,7 @@ export default class Students extends Component
             });
 
         axios.get('http://localhost:4000/ects/visChezParent')
-            .then(res =>
-            {
+            .then(res => {
                 let means = {
                     oui: {
                         count: 0,
@@ -141,8 +135,7 @@ export default class Students extends Component
                     },
                 };
 
-                res.data.forEach(item =>
-                {
+                res.data.forEach(item => {
                     let years = item.nombreCrédit > 60 ? Math.floor(item.nombreCrédit / 60) : 1;
 
                     if (item.visChezParent) {
@@ -180,8 +173,7 @@ export default class Students extends Component
             });
 
         axios.get('http://localhost:4000/ects/promo')
-            .then(res =>
-            {
+            .then(res => {
                 let means = {
                     asc1: {
                         count: 0,
@@ -205,8 +197,7 @@ export default class Students extends Component
                     },
                 };
 
-                res.data.forEach(item =>
-                {
+                res.data.forEach(item => {
                     let years = item.nombreCrédit > 60 ? Math.floor(item.nombreCrédit / 60) : 1;
 
                     switch (item.promo) {
@@ -264,8 +255,7 @@ export default class Students extends Component
             });
 
         axios.get('http://localhost:4000/rattrapageParAn/campus')
-            .then(res =>
-            {
+            .then(res => {
                 let means = {
                     troyes: {
                         count: 0,
@@ -293,8 +283,7 @@ export default class Students extends Component
                     }
                 };
 
-                res.data.forEach(item =>
-                {
+                res.data.forEach(item => {
                     switch (item.campus) {
                         case 'Paris' :
                             means.paris.total += item.rattrapageParAn;
@@ -356,8 +345,7 @@ export default class Students extends Component
             });
 
         axios.get('http://localhost:4000/rattrapageParAn/promo')
-            .then(res =>
-            {
+            .then(res => {
                 let means = {
                     asc1: {
                         count: 0,
@@ -381,8 +369,7 @@ export default class Students extends Component
                     },
                 };
 
-                res.data.forEach(item =>
-                {
+                res.data.forEach(item => {
                     switch (item.promo) {
                         case 'ASC.1' :
                             means.asc1.total += item.rattrapageParAn;
@@ -438,8 +425,7 @@ export default class Students extends Component
             });
 
         axios.get('http://localhost:4000/raisonArret')
-            .then(res =>
-            {
+            .then(res => {
                 let means = {
                     empty: 0,
                     school: 0,
@@ -447,31 +433,27 @@ export default class Students extends Component
                     personnel: 0,
                 };
 
-                res.data.forEach(item =>
-                {
-                    res.data.forEach(item =>
-                    {
-                        let raison = item.raisonArret ? item.raisonArret.split(',') : null;
-                        if (raison) {
-                            raison.forEach(element =>
-                            {
-                                switch (element) {
-                                    case "Probleme vis a vis de l'ecole" :
-                                        means.school++;
-                                        break;
-                                    case "Probleme personnel" :
-                                        means.personnel++;
-                                        break;
-                                    default :
-                                        means.domain++;
-                                        break;
-                                }
-                            });
-                        } else
-                            means.empty++;
-                    });
+                res.data.forEach(item => {
 
-                    let total = (means.school + means.domain + means.personnel) /100;
+                    let raison = item.raisonArret ? item.raisonArret.split(',') : null;
+                    if (raison) {
+                        raison.forEach(element => {
+                            switch (element) {
+                                case "Probleme vis a vis de l'ecole" :
+                                    means.school++;
+                                    break;
+                                case "Probleme personnel" :
+                                    means.personnel++;
+                                    break;
+                                default :
+                                    means.domain++;
+                                    break;
+                            }
+                        });
+                    } else
+                        means.empty++;
+
+                    let total = (means.school + means.domain + means.personnel) / 100;
 
                     this.setState({
 
@@ -519,8 +501,7 @@ export default class Students extends Component
             });
     }
 
-    render()
-    {
+    render() {
         return (
             <div className='container'>
                 <div className="row justify-content-center">
@@ -528,39 +509,39 @@ export default class Students extends Component
                         title="ECTS moyen par campus"
                         graph="Graph"
                         graphLeft={this.state.ectsByCampus}
-                        graphRight=""/>
+                        graphRight="" />
 
                     <Graph
                         title="ECTS moyen selon la situation"
                         graph="Graph"
                         graphLeft={this.state.ectsByParents}
-                        graphRight=""/>
+                        graphRight="" />
                 </div>
                 <div className="row justify-content-center">
                     <Graph
                         title="ECTS moyen selon le diplôme d'origine"
                         graph="Graph"
                         graphLeft={this.state.ectsByPreviousDegree}
-                        graphRight=""/>
+                        graphRight="" />
                     <Graph
                         title="Rattrapage par an"
                         tabLeft="Campus"
                         tabRight="Promo"
                         graph="Graph"
                         graphLeft={this.state.rattrapageByCampus}
-                        graphRight={this.state.rattrapageByPromo}/>
+                        graphRight={this.state.rattrapageByPromo} />
                 </div>
                 <div className="row justify-content-center">
                     <Graph
                         title="A voulu arrêter l'école"
                         graph="Graph"
                         graphLeft={this.state.raisonsArretCount}
-                        graphRight=""/>
+                        graphRight="" />
                     <Graph
                         title="Origine du problème"
                         graph="Graph"
                         graphLeft={this.state.raisonsArretReasons}
-                        graphRight=""/>
+                        graphRight="" />
                 </div>
             </div>
         );

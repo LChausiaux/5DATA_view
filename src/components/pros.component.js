@@ -1,24 +1,23 @@
 import React, {Component} from "react";
 import Graph from "./graph.component";
-import {Bar} from 'react-chartjs-2';
+import {Bar, Pie} from 'react-chartjs-2';
 import axios from "axios";
 
-export default class Pros extends Component
-{
+export default class Pros extends Component {
 
-    constructor()
-    {
+    constructor() {
         super();
         this.state = {
             internshipByCampus: '<img src="../img/logo.png" />',
             contratProByCampus: '<img src="../img/logo.png" />',
             internshipByPromo: '<img src="../img/logo.png" />',
             contratProByPromo: '<img src="../img/logo.png" />',
+            contratsByStage: '<img src="../img/logo.png" />',
+            contratsByContratPro: '<img src="../img/logo.png" />',
         }
     }
 
-    componentWillMount()
-    {
+    componentWillMount() {
         //ajax requests
         /*
            Stage / campus
@@ -27,8 +26,7 @@ export default class Pros extends Component
            Contrat pro/promo
          */
         axios.get('http://localhost:4000/stage/campus')
-            .then(res =>
-            {
+            .then(res => {
                 let means = {
                     troyes: {
                         count: 0,
@@ -56,8 +54,7 @@ export default class Pros extends Component
                     }
                 };
 
-                res.data.forEach(item =>
-                {
+                res.data.forEach(item => {
                     switch (item.campus) {
                         case 'Paris' :
                             means.paris.count += item.stage ? 1 : 0;
@@ -120,8 +117,7 @@ export default class Pros extends Component
             });
 
         axios.get('http://localhost:4000/stage/promo')
-            .then(res =>
-            {
+            .then(res => {
                 let means = {
                     asc1: {
                         count: 0,
@@ -145,8 +141,7 @@ export default class Pros extends Component
                     }
                 };
 
-                res.data.forEach(item =>
-                {
+                res.data.forEach(item => {
                     switch (item.promo) {
                         case 'ASC.1' :
                             means.asc1.count += item.stage ? 1 : 0;
@@ -204,8 +199,7 @@ export default class Pros extends Component
             });
 
         axios.get('http://localhost:4000/contratPro/campus')
-            .then(res =>
-            {
+            .then(res => {
                 let means = {
                     troyes: {
                         count: 0,
@@ -233,8 +227,7 @@ export default class Pros extends Component
                     }
                 };
 
-                res.data.forEach(item =>
-                {
+                res.data.forEach(item => {
                     switch (item.campus) {
                         case 'Paris' :
                             means.paris.count += item.contratPro ? 1 : 0;
@@ -297,8 +290,7 @@ export default class Pros extends Component
             });
 
         axios.get('http://localhost:4000/contratPro/promo')
-            .then(res =>
-            {
+            .then(res => {
                 let means = {
                     asc1: {
                         count: 0,
@@ -322,8 +314,7 @@ export default class Pros extends Component
                     }
                 };
 
-                res.data.forEach(item =>
-                {
+                res.data.forEach(item => {
                     switch (item.promo) {
                         case 'ASC.1' :
                             means.asc1.count += item.contratPro ? 1 : 0;
@@ -380,10 +371,102 @@ export default class Pros extends Component
                 })
             });
 
+        axios.get('http://localhost:4000/stage')
+            .then(res => {
+                let companies = {};
+                res.data.forEach(item => {
+                    let company = item.stage.split(',');
+
+                    company.forEach(element => {
+                        element = element.replace("/[\"]/", "").replace("Groupe", "").trim();
+
+                        if (element in companies)
+                            companies[element]++;
+                        else
+                            companies[element] = 1;
+                    });
+                });
+
+                console.log(companies);
+
+                this.setState({
+                    contratsByStage: <Pie
+                        data={{
+                            labels: Object.keys(companies),
+                            datasets: [
+                                {
+                                    data: Object.values(companies),
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.6)',
+                                        'rgba(54, 162, 235, 0.6)',
+                                        'rgba(255, 206, 86, 0.6)',
+                                        'rgba(75, 192, 192, 0.6)',
+                                        'rgba(153, 102, 255, 0.6)',
+                                        'rgba(255, 159, 64, 0.6)',
+                                        'rgba(255, 99, 132, 0.6)',
+                                        'rgba(54, 162, 235, 0.6)',
+                                        'rgba(255, 206, 86, 0.6)',
+                                        'rgba(75, 192, 192, 0.6)',
+                                        'rgba(153, 102, 255, 0.6)',
+                                        'rgba(255, 159, 64, 0.6)',
+                                    ]
+                                }
+                            ]
+                        }}
+                        options={{
+                            legend: false
+                        }}
+                        redraw
+                    />
+                })
+            });
+
+        axios.get('http://localhost:4000/contratPro')
+            .then(res => {
+                let companies = {};
+                res.data.forEach(item => {
+                    let company = item.contratPro.split(',');
+
+                    company.forEach(element => {
+                        element = element.replace("/[\"]/", "").replace("Groupe", "").trim();
+
+                        if (element in companies)
+                            companies[element]++;
+                        else
+                            companies[element] = 1;
+                    });
+                });
+
+                console.log(companies);
+
+                this.setState({
+                    contratsByContratPro: <Pie
+                        data={{
+                            labels: Object.keys(companies),
+                            datasets: [
+                                {
+                                    data: Object.values(companies),
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.6)',
+                                        'rgba(54, 162, 235, 0.6)',
+                                        'rgba(255, 206, 86, 0.6)',
+                                        'rgba(75, 192, 192, 0.6)',
+                                        'rgba(153, 102, 255, 0.6)',
+                                        'rgba(255, 159, 64, 0.6)',
+                                    ]
+                                }
+                            ]
+                        }}
+                        options={{
+                            legend: false
+                        }}
+                        redraw
+                    />
+                })
+            });
     }
 
-    render()
-    {
+    render() {
         return (
             <div className='container'>
                 <div className="row justify-content-center">
@@ -393,7 +476,7 @@ export default class Pros extends Component
                         tabLeft="Campus"
                         tabRight="School"
                         graphLeft={this.state.internshipByCampus}
-                        graphRight={this.state.internshipByPromo}/>
+                        graphRight={this.state.internshipByPromo} />
 
                     <Graph
                         title="Pourcentage de contrat pro "
@@ -401,7 +484,16 @@ export default class Pros extends Component
                         tabLeft="Campus"
                         tabRight="School"
                         graphLeft={this.state.contratProByCampus}
-                        graphRight={this.state.contratProByPromo}/>
+                        graphRight={this.state.contratProByPromo} />
+                </div>
+                <div className="row justify-content-center">
+                    <Graph
+                        title="Recrutement"
+                        graph="Graph"
+                        tabLeft="Stages"
+                        tabRight="Contrats pro"
+                        graphLeft={this.state.contratsByStage}
+                        graphRight={this.state.contratsByContratPro} />
                 </div>
             </div>
         );

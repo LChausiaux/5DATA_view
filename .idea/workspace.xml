@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c5f0333a-d7ab-47b8-bbd7-62c51adcd2b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pros.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pros.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/students.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/students.component.js" afterDir="false" />
     </list>
@@ -104,7 +103,9 @@
       <workItem from="1580029765519" duration="7454000" />
       <workItem from="1580112968875" duration="10985000" />
       <workItem from="1580199612035" duration="12685000" />
-      <workItem from="1580289697271" duration="2225000" />
+      <workItem from="1580289697271" duration="2758000" />
+      <workItem from="1580307218469" duration="1244000" />
+      <workItem from="1580378322253" duration="5139000" />
     </task>
     <task id="LOCAL-00001" summary="Graph component added&#10;Chartjs integrated">
       <created>1579700449063</created>
@@ -120,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579710520853</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Graph tab fixed">
+      <created>1580303153842</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580303153842</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +137,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Graph component added&#10;Chartjs integrated" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="Graph tab fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Graph tab fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#ESLint" timestamp="1579683023619">
@@ -140,10 +149,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1579515417764" />
-    <state x="391" y="22" key="CommitChangelistDialog2" timestamp="1579710518269">
+    <state x="391" y="22" key="CommitChangelistDialog2" timestamp="1580303151792">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="22" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579710518269" />
+    <state x="391" y="22" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580303151792" />
     <state x="147" y="81" key="DiffContextDialog" timestamp="1579710371733">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -172,10 +181,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1579520778142" />
-    <state x="361" y="142" key="Vcs.Push.Dialog.v2" timestamp="1579710566429">
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2" timestamp="1580303155994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1579710566429" />
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1580303155994" />
     <state x="418" y="43" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579966259431">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
