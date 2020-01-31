@@ -329,7 +329,7 @@ export default class Campus extends Component
                         graphLeft={this.state.labByCampus}
                         graphRight="Right"/>
                     <Graph
-                        title="Population"
+                        title="Nombre d'étudiants mangeant sur le campus"
                         graph="Graph"
                         graphLeft={this.state.eatByCampus}
                         graphRight="Right"/>

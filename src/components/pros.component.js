@@ -474,7 +474,7 @@ export default class Pros extends Component {
                         title="Pourcentage de stagiaires"
                         graph="Graph"
                         tabLeft="Campus"
-                        tabRight="School"
+                        tabRight="Promo "
                         graphLeft={this.state.internshipByCampus}
                         graphRight={this.state.internshipByPromo} />
 
@@ -482,7 +482,7 @@ export default class Pros extends Component {
                         title="Pourcentage de contrat pro "
                         graph="Graph"
                         tabLeft="Campus"
-                        tabRight="School"
+                        tabRight="Promo"
                         graphLeft={this.state.contratProByCampus}
                         graphRight={this.state.contratProByPromo} />
                 </div>
